@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #grid {
+            display: grid;
+            width: 100%;
+            height: 100vh;
+            grid-template:
+                [header] "head head" 70px [header] [navbar] "nav nav" 70px [navbar] [sidebar] "side main" 1fr [sidebar] [main] "side main"[main] [footer] "foot foot" 50px [footer] / 20% 80%;
+        }
+
+
+        header {
+            background-color: red;
+            grid-area: head;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        header li {
+            padding: 20px;
+            color: white;
+            display: inline-block;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        nav {
+            background-color: gray;
+            grid-area: nav;
+            text-align: center;
+        }
+
+        aside {
+            background-color: purple;
+            grid-area: side;
+        }
+
+        main {
+            background-color: blue;
+            grid-area: main;
+        }
+
+        footer {
+            background-color: rgb(163, 0, 0);
+            grid-area: foot;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="grid">
+        <header>
+            <img src="logo.smk.jpg" alt="">
+            <li>Home</li>
+            </ul>
+            <li>About</li>
+            <li>List</li>
+            <li>Tutorial</li>
+            <p>.</p>
+        </header>
+        <nav>SMK INFORMATIKA</nav>
+        <aside>Sidebar</aside>
+        <main>Sejarah coding dimulai pada tahun 1801 ketika Joseph-Marie Jacquard menciptakan mesin tenun otomatis yang menggunakan kartu berlubang sebagai instruksi. Kemudian pada tahun 1837, Charles Babbage menciptakan mesin analitik pertama yang dapat diprogram menggunakan kartu berlubang.</main>
+        <footer>Footer</footer>
+
+    </div>
+</body>
+
+</html>
